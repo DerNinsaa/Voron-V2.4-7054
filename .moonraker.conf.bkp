@@ -97,3 +97,10 @@ repo = fluidd-core/fluidd
 channel = stable
 type = web
 
+[update_manager fluidd-config]
+managed_services = klipper
+origin = https://github.com/fluidd-core/fluidd-config.git
+path = /home/ninsaa/fluidd-config
+primary_branch = master
+type = git_repo
+
