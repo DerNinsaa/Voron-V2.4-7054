@@ -122,15 +122,15 @@ origin: https://github.com/Clon1998/mobileraker_companion.git
 path: /home/ninsaa/mobileraker_companion
 type: git_repo
 
-# [update_manager cartographer]
-# type: git_repo
-# path: ~/cartographer-klipper
-# channel: stable
-# origin: https://github.com/Cartographer3D/cartographer-klipper.git
-# is_system_service: False
-# managed_services: klipper
-# info_tags:
-#   desc=Cartographer Probe
+[update_manager cartographer]
+type: git_repo
+path: ~/cartographer-klipper
+channel: stable
+origin: https://github.com/Cartographer3D/cartographer-klipper.git
+is_system_service: False
+managed_services: klipper
+info_tags:
+  desc=Cartographer Probe
 [update_manager fluidd]
 path: /home/ninsaa/fluidd
 repo: fluidd-core/fluidd
@@ -173,22 +173,4 @@ requirements: scripts/KlipperScreen-requirements.txt
 install_script: scripts/KlipperScreen-install.sh
 managed_services: KlipperScreen
 
-[update_manager beacon]
-type: git_repo
-channel: dev
-path: ~/beacon_klipper
-origin: https://github.com/beacon3d/beacon_klipper.git
-env: ~/klippy-env/bin/python
-requirements: requirements.txt
-install_script: install.sh
-is_system_service: False
-managed_services: klipper
-info_tags:
-  desc=Beacon Surface Scanner
 
-[update_manager goose_purge]
-type: git_repo
-primary_branch: main
-path: ~/goose_purge_macro
-origin: https://github.com/Graylag-PD/Goose-Purge-Macro.git
-managed_services: klipper
